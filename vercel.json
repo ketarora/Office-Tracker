@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "artifacts/office-tracker/dist/public",
   "rewrites": [
     {
       "source": "/api/(.*)",
