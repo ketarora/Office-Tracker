@@ -1,0 +1,93 @@
+﻿node.exe : [WARN] The 
+"pnpm" field in 
+package.json is no 
+longer read by pnpm. 
+The following keys 
+were ignored: "pnpm.onl
+yBuiltDependencies", 
+"pnpm.overrides". See h
+ttps://pnpm.io/settings
+ for the new home of 
+each setting.
+At C:\Users\User\AppDat
+a\Roaming\npm\pnpm.ps1:
+24 char:5
++     & "node$exe"  "$b
+asedir/node_modules/pnp
+m/bin/pnpm.mjs" $args
++     ~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ([WARN] The "p   
+ np...f each settin    
+g.:String) [], Rem    
+oteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+
+> workspace@0.0.0 build C:\Users\User\Downloads\Office-Tracker
+> pnpm run typecheck && pnpm --filter @workspace/api-server --filter @workspace/office-tracker run build
+
+
+> workspace@0.0.0 typecheck C:\Users\User\Downloads\Office-Tracker
+> pnpm run typecheck:libs && pnpm -r --filter "./artifacts/**" --filter "./scripts" --if-present run typecheck
+
+
+> workspace@0.0.0 typecheck:libs C:\Users\User\Downloads\Office-Tracker
+> tsc --build
+
+Scope: 4 of 9 workspace projects
+artifacts/api-server typecheck$ tsc -p tsconfig.json --noEmit
+artifacts/mockup-sandbox typecheck$ tsc -p tsconfig.json --noEmit
+scripts typecheck$ tsc -p tsconfig.json --noEmit
+artifacts/office-tracker typecheck$ tsc -p tsconfig.json --noEmit
+scripts typecheck: Done
+artifacts/api-server typecheck: Done
+artifacts/mockup-sandbox typecheck: Done
+artifacts/office-tracker typecheck: Done
+Scope: 2 of 9 workspace projects
+artifacts/api-server build$ node ./build.mjs
+artifacts/office-tracker build$ vite build --config vite.config.ts
+artifacts/office-tracker build: C:\Users\User\Downloads\Office-Tracker\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:115
+artifacts/office-tracker build: 		throw new Error(
+artifacts/office-tracker build: 		      ^
+artifacts/office-tracker build: Error: Cannot find module @rollup/rollup-win32-x64-msvc. npm has a bug related to optional dependencies (https://github.com/npm/cli/issues/4828). Please try `npm i` again after removing both package-lock.json and node_modules directory.
+artifacts/office-tracker build:     at requireWithFriendlyError (C:\Users\User\Downloads\Office-Tracker\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:115:9)
+artifacts/office-tracker build:     at Object.<anonymous> (C:\Users\User\Downloads\Office-Tracker\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:124:76)
+artifacts/office-tracker build:     at Module._compile (node:internal/modules/cjs/loader:1730:14)
+artifacts/office-tracker build:     at Object..js (node:internal/modules/cjs/loader:1895:10)
+artifacts/office-tracker build:     at Module.load (node:internal/modules/cjs/loader:1465:32)
+artifacts/office-tracker build:     at Function._load (node:internal/modules/cjs/loader:1282:12)
+artifacts/office-tracker build:     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+artifacts/office-tracker build:     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+artifacts/office-tracker build:     at cjsLoader (node:internal/modules/esm/translators:266:5)
+artifacts/office-tracker build:     at ModuleWrap.<anonymous> (node:internal/modules/esm/translators:200:7) {
+artifacts/office-tracker build:   [cause]: Error: Cannot find module '@rollup/rollup-win32-x64-msvc'
+artifacts/office-tracker build:   Require stack:
+artifacts/office-tracker build:   - C:\Users\User\Downloads\Office-Tracker\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js
+artifacts/office-tracker build:       at Function._resolveFilename (node:internal/modules/cjs/loader:1401:15)
+artifacts/office-tracker build:       at defaultResolveImpl (node:internal/modules/cjs/loader:1057:19)
+artifacts/office-tracker build:       at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1062:22)
+artifacts/office-tracker build:       at Function._load (node:internal/modules/cjs/loader:1211:37)
+artifacts/office-tracker build:       at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+artifacts/office-tracker build:       at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+artifacts/office-tracker build:       at Module.require (node:internal/modules/cjs/loader:1487:12)
+artifacts/office-tracker build:       at require (node:internal/modules/helpers:135:16)
+artifacts/office-tracker build:       at requireWithFriendlyError (C:\Users\User\Downloads\Office-Tracker\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:97:10)
+artifacts/office-tracker build:       at Object.<anonymous> (C:\Users\User\Downloads\Office-Tracker\node_modules\.pnpm\rollup@4.60.3\node_modules\rollup\dist\native.js:124:76) {
+artifacts/office-tracker build:     code: 'MODULE_NOT_FOUND',
+artifacts/office-tracker build:     requireStack: [
+artifacts/office-tracker build:       'C:\\Users\\User\\Downloads\\Office-Tracker\\node_modules\\.pnpm\\rollup@4.60.3\\node_modules\\rollup\\dist\\native.js'
+artifacts/office-tracker build:     ]
+artifacts/office-tracker build:   }
+artifacts/office-tracker build: }
+artifacts/office-tracker build: Node.js v22.16.0
+artifacts/office-tracker build: Failed
+C:\Users\User\Downloads\Office-Tracker\artifacts\office-tracker:
+ΓÇëERR_PNPM_RECURSIVE_RUN_FIRST_FAILΓÇë @workspace/office-tracker@0.0.0 build: `vite build --config vite.config.ts`
+Exit status 1
+ΓÇëELIFECYCLEΓÇë Command failed with exit code 1.
