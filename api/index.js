@@ -1,10 +1,9 @@
-// @ts-nocheck
-import app from "../artifacts/api-server/src/app";
-import { initializeDatabase } from "../lib/db/src/index";
+import app from "../artifacts/api-server/src/app.js";
+import { initializeDatabase } from "../lib/db/src/index.js";
 
 let dbInitialized = false;
 
-export default async function handler(req: any, res: any) {
+export default async function handler(req, res) {
   if (!dbInitialized) {
     try {
       await initializeDatabase();
