@@ -1,5 +1,6 @@
-import app from "../src/app";
-import { initializeDatabase } from "@workspace/db";
+// @ts-nocheck
+import app from "../artifacts/api-server/src/app";
+import { initializeDatabase } from "../lib/db/src/index";
 
 let dbInitialized = false;
 
